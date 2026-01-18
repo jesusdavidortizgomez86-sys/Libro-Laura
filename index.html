@@ -1,151 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Libro para Laura 💙</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Libro para Laura</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    *{
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Georgia, serif;
-    }
+<style>
+body{
+  margin:0;
+  background:#0b1d3a;
+  color:#f5f5f5;
+  font-family: Georgia, serif;
+}
 
-    body{
-      background: #f5f1ea;
-    }
+.page{
+  display:none;
+  min-height:100vh;
+  padding:60px 40px;
+  box-sizing:border-box;
+}
 
-    .page{
-      min-height: 100vh;
-      padding: 60px 40px;
-      display: none;
-    }
+.page.active{
+  display:block;
+}
 
-    /* Mostrar portada por defecto */
-    #p1{
-      display: block;
-    }
+.cover{
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
 
-    /* Mostrar página seleccionada */
-    .page:target{
-      display: block;
-    }
+h1{
+  font-size:2.5em;
+  margin-bottom:10px;
+}
 
-    /* PORTADA */
-    .cover{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: #ede6d8;
-    }
+h2{
+  font-weight:normal;
+  opacity:0.8;
+}
 
-    .cover h1{
-      font-size: 3em;
-      margin-bottom: 20px;
-    }
+p{
+  font-style:italic;
+  font-size:1.2em;
+  line-height:1.8;
+}
 
-    .cover p{
-      font-size: 1.3em;
-    }
+.nav{
+  position:fixed;
+  bottom:20px;
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  padding:0 30px;
+}
 
-    /* TEXTO */
-    .content{
-      max-width: 800px;
-      margin: auto;
-      font-size: 1.2em;
-      line-height: 1.8;
-    }
-
-    /* NAVEGACIÓN */
-    .nav{
-      position: fixed;
-      bottom: 20px;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 30px;
-    }
-
-    .nav a{
-      text-decoration: none;
-      font-size: 2em;
-      color: #333;
-      background: #fff;
-      padding: 10px 18px;
-      border-radius: 50%;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .nav a:hover{
-      background: #ddd;
-    }
-  </style>
+button{
+  background:none;
+  border:none;
+  color:#ffd700;
+  font-size:2em;
+  cursor:pointer;
+}
+</style>
 </head>
 
 <body>
 
-  <!-- PORTADA -->
-  <section class="page cover" id="p1">
-    <h1>Para Laura 💙</h1>
-    <p>Un libro escrito con el corazón</p>
+<!-- PORTADA -->
+<div class="page cover active">
+  <h1>PARA: LAURA NAVAS</h1>
+  <h2>(MY FAVORITE PLAYER)</h2>
+  <p style="font-style:normal;">
+    De: Su amigo alias<br>
+    vaca solitaria 😔
+  </p>
+</div>
 
-    <div class="nav">
-      <span></span>
-      <a href="#p2">→</a>
-    </div>
-  </section>
+<div class="page">
+<p>Hola, soy yoo. Sabes, nunca pensé que haría algo como esto, pero me alegra que haya sido para ti. ¿Quién diría, no? Te conocí cuando tenías prácticamente 13 años, la chica más blanca del salón, la más callada y la que siempre ocupaba el puesto número uno en el colegio, jaja.</p>
+</div>
 
-  <!-- PÁGINA 2 -->
-  <section class="page" id="p2">
-    <div class="content">
-      <p>
-        Anoche te escribí estas palabras porque necesitaba que existieran,
-        aunque no supiera si algún día las leerías.  
-        No nacieron del orgullo, nacieron del sentimiento.
-      </p>
-    </div>
+<div class="page">
+<p>No hubiese imaginado todo lo que he pasado en estos años y lo loco que sería si no tuviera con quién hablar. Me has ayudado demasiado y a veces un simple gracias no es suficiente.</p>
+</div>
 
-    <div class="nav">
-      <a href="#p1">←</a>
-      <a href="#p3">→</a>
-    </div>
-  </section>
+<div class="page">
+<p>Me siento con suerte de haberte conocido. Has sido una de las mejores cosas que me han pasado en la vida y tienes cualidades que te hacen única.</p>
+</div>
 
-  <!-- PÁGINA 3 -->
-  <section class="page" id="p3">
-    <div class="content">
-      <p>
-        Hay personas que llegan sin hacer ruido,  
-        pero cuando se quedan, lo cambian todo.  
-        Tú fuiste eso para mí.
-      </p>
-    </div>
+<div class="page">
+<p>No hay nadie en quien confíe más que en ti. Así como tú has estado para mí, yo siempre estaré para ti, sin importar la hora o el lugar.</p>
+</div>
 
-    <div class="nav">
-      <a href="#p2">←</a>
-      <a href="#p4">→</a>
-    </div>
-  </section>
+<div class="page">
+<p>Sé que últimamente no te has sentido del todo bien, pero eres la persona más fuerte que conozco. Y lo sé porque se trata de Laura Navas.</p>
+</div>
 
-  <!-- PÁGINA 4 -->
-  <section class="page" id="p4">
-    <div class="content">
-      <p>
-        No escribo para convencerte de nada.  
-        Escribo porque callarlo dolería más.  
-        Porque a veces amar también es soltar.
-      </p>
-    </div>
+<div class="page">
+<p>Te quiero demasiado, Laura. Eres una de las personas más importantes para mí. Siempre que necesites algo, aquí estaré.</p>
+</div>
 
-    <div class="nav">
-      <a href="#p3">←</a>
-      <span></span>
-    </div>
-  </section>
+<div class="nav">
+  <button onclick="prev()">⬅</button>
+  <button onclick="next()">➡</button>
+</div>
+
+<script>
+let current = 0;
+const pages = document.querySelectorAll('.page');
+
+function showPage(index){
+  pages.forEach(p => p.classList.remove('active'));
+  pages[index].classList.add('active');
+}
+
+function next(){
+  if(current < pages.length - 1){
+    current++;
+    showPage(current);
+  }
+}
+
+function prev(){
+  if(current > 0){
+    current--;
+    showPage(current);
+  }
+}
+</script>
 
 </body>
 </html>
