@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Libro para Laura</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', cursive;
+      background: linear-gradient(#0b1d3a, #1a2f5f);
+      color: #f5f5f5;
+      overflow: hidden;
+    }
+
+    .page {
+      display: none;
+      padding: 40px;
+      height: 100vh;
+      box-sizing: border-box;
+      background-image: radial-gradient(circle at top, rgba(255,255,255,0.1), transparent 60%);
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    .cover {
+      font-family: 'Georgia', serif;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-weight: normal;
+      opacity: 0.8;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      font-style: italic;
+    }
+
+    .nav {
+      position: fixed;
+      bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: none;
+      border: none;
+      color: #ffd700;
+      font-size: 2em;
+      cursor: pointer;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+  <source src="https://www.youtube.com/embed/2zFzG2WJ9dY">
+</audio>
+
+<div class="page cover active">
+  <h1>PARA: LAURA NAVAS</h1>
+  <h2>(MY FAVORITE PLAYER)</h2>
+  <br>
+  <p style="font-style: normal;">De: Su amigo alias<br>vaca solitaria 😔</p>
+</div>
+
+<div class="page">
+  <p>Hola, soy yoo. Sabes, nunca pensé que haría algo como esto, pero me alegra que haya sido para ti. ¿Quién diría, no? Te conocí cuando tenías prácticamente 13 años: la chica más blanca del salón, la más callada y la que siempre ocupa el puesto número uno en el colegio, jaja. Definitivamente fue gracias al voleibol que logramos ser más amigos, porque por el salón no hubiese sido tan así.</p>
+</div>
+
+<div class="page">
+  <p>Sabes, no hubiese imaginado que hubiese sido posible todo lo que he pasado en estos años y seguramente fuera algo loco si no tuviera con quién hablar de esto. Me has ayudado demasiado; siento que a veces no encuentro formas de cómo agradecértelo y que, a veces, un simple gracias no es suficiente.</p>
+</div>
+
+<div class="page">
+  <p>Me siento con suerte de haberte conocido. Definitivamente ha sido una de las mejores cosas que me han pasado en la vida. Me has enseñado demasiadas cosas y tienes muchas cualidades que siempre te hacen notar tan única.</p>
+</div>
+
+<div class="page">
+  <p>No hay ninguna otra persona en la que yo más confíe que en ti. Y así como tú has estado para mí, yo siempre estaré para ti. No importa si es de madrugada o a medianoche, no importa si estoy en Saravena o en Cúcuta; siempre que yo pueda o necesites de mí, no dudes en decírmelo.</p>
+</div>
+
+<div class="page">
+  <p>Hay algo que siempre he dicho: tú eres muy capaz de cualquier cosa. Sin importar las cosas que hayas tenido que pasar, sé que has pensado todo de la manera más madura y, aunque a veces llegas a salirte de control y no sepas cómo manejarlo de la manera adecuada, no te alteras para que todos lo noten. Entre menos personas se den cuenta de lo que pasa en ti, es mejor para ti. Y no es que sea mejor, solo que tratas de no depender de nadie.</p>
+</div>
+
+<div class="page">
+  <p>Sé que últimamente no te has sentido muy bien en el fondo, pero has sido la persona más fuerte que he visto. Sin importar las probabilidades que te hayan mencionado, yo sé que lograrás cualquier cosa. ¿Y por qué lo sé? Porque se trata de Laura Navas, un nombre que da mucha inspiración… al menos yo lo veo así, jsjs.</p>
+</div>
+
+<div class="page">
+  <p>Y aunque lleguen los días grises y sientas que no eres suficiente para salir de algo, me tienes a mí, a tus otros amigos y a tu familia que te aprecian. Lo digo porque tú te haces querer y apreciar.</p>
+</div>
+
+<div class="page">
+  <p>Eres muy valiente, capaz, honesta, versátil, graciosa (sí, ahora sociable), cariñosa a tu modo, detallista, amable, cautivadora, solidaria —aunque a veces te gane la pena—, responsable, optimista, humilde e íntegra.</p>
+</div>
+
+<div class="page">
+  <p>Y sé que tienes muchas más cualidades que te hacen especial; solo que, a veces, no está mal recordar lo que eres y todo lo que tienes, jsjs.</p>
+</div>
+
+<div class="page">
+  <p>Solo quiero que estos XV sean especiales, porque quince años solo se cumplen una vez. Me alegra que hayas querido celebrarlos, aunque haya sido algo más pequeño; no importa, estás con personas importantes para ti. Te deseo un día muy lindo, muy feliz y lleno de mucha plata… jajajaja. Nah, mentiras, espero que la pases increíble.</p>
+</div>
+
+<div class="page">
+  <p>Te quiero demasiado, Laura. Eres una de las personas más importantes para mí. Cualquier cosa que pueda hacer por ti, solo dímelo y te ayudaré.</p>
+</div>
+
+<div class="nav">
+  <button onclick="prev()">⬅</button>
+  <button onclick="next()">➡</button>
+</div>
+
+<script>
+  let current = 0;
+  const pages = document.querySelectorAll('.page');
+
+  function showPage(index) {
+    pages.forEach(p => p.classList.remove('active'));
+    pages[index].classList.add('active');
+  }
+
+  function next() {
+    if (current < pages.length - 1) {
+      current++;
+      showPage(current);
+    }
+  }
+
+  function prev() {
+    if (current > 0) {
+      current--;
+      showPage(current);
+    }
+  }
+</script>
+
+</body>
+</html>
