@@ -136,6 +136,7 @@
 </div>
 
 <script>
+document.addEventListener("DOMContentLoaded", function () {
   let current = 0;
   const pages = document.querySelectorAll('.page');
 
@@ -144,20 +145,20 @@
     pages[index].classList.add('active');
   }
 
-  function next() {
+  window.next = function () {
     if (current < pages.length - 1) {
       current++;
       showPage(current);
     }
   }
 
-  function prev() {
+  window.prev = function () {
     if (current > 0) {
       current--;
       showPage(current);
     }
   }
-</script>
 
-</body>
-</html>
+  showPage(current);
+});
+</script>
