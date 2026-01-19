@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Laura</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #0b1d3a, #1e3c72);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia, serif;
+  color: white;
+}
+
+.book {
+  width: 85%;
+  max-width: 720px;
+  background: rgba(0,0,0,0.55);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.page {
+  display: none;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.page.active {
+  display: block;
+}
+
+.cover {
+  font-style: normal;
+}
+
+h1, h2 {
+  font-style: normal;
+}
+
+.nav {
+  margin-top: 30px;
+}
+
+button {
+  background: none;
+  border: 2px solid white;
+  color: white;
+  font-size: 16px;
+  padding: 10px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 15px;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+</style>
+</head>
+
+<body>
+
+<div class="book">
+
+<!-- PORTADA -->
+<div class="page active cover">
+  <h1>PARA: LAURA NAVAS</h1>
+  <h2>(MY FAVORITE PLAYER)</h2>
+  <p>DE: Su amigo alias: vaca solitaria 😔</p>
+</div>
+
+<div class="page">
+Hola, soy yoo, sabes nunca pensé que haría algo como esto pero me alegra que haya sido para ti.
+Quien diría no? Te conocí cuando tenías prácticamente 13 años la chica más blanca del salón,
+la más callada, y la que siempre ocupa el puesto número 1 en el colegio jaja, definitivamente
+fue gracias al voleibol que logramos ser más amigos, porque por el salón no hubiese sido tan así.
+</div>
+
+<div class="page">
+Sabes no hubiese imaginado que hubiese sido posible todo lo que he pasado en estos años y
+seguramente fuera algo loco si no tuviera con quien hablar de esto, me has ayudado demasiado,
+siento que a veces no encuentro formas de cómo agradecértelo y que a veces un simple gracias
+no es suficiente.
+</div>
+
+<div class="page">
+Me siento con suerte de haberte conocido, definitivamente ha sido una de las mejores cosas
+que me han pasado en la vida, me has enseñado demasiadas cosas, y tienes muchas cualidades
+de las cuales siempre te hacen notar tan única.
+</div>
+
+<div class="page">
+No hay ninguna otra persona en la que yo más confíe que en ti. Y como tú has estado para mí
+yo siempre estaré para ti, no importa si es de madrugada o si es a media noche, no importa
+si estoy en Saravena o si estoy en Cúcuta, siempre que yo pueda o necesita de mí no dude en decírmelo.
+</div>
+
+<div class="page">
+Hay algo que siempre he dicho y es que tú eres muy capaz de cualquier cosa, sin importar las
+cosas que hayas tenido que pasar sé que has pensando todo de la manera más madura, y aunque
+a veces llegas a salirte de control y no sepas cómo manejarlo de la manera adecuada; no te
+alteras para que todos los noten, entre menos personas se den de cuenta de lo que pasa en ti
+es mejor para ti. Y no es que sea mejor solo que tratas de no depender de nadie.
+</div>
+
+<div class="page">
+Sé que tú últimamente no te has sentido muy bien en el fondo, pero has sido la persona más
+fuerte que he visto sin importar las probabilidades que te hayan mencionado, yo sé que tú
+lograrás cualquier cosa, y, ¿porque lo sé? Porque se trata de Laura Navas. Un nombre del cual
+da mucha inspiración, al menos yo lo veo así Jsjs.
+</div>
+
+<div class="page">
+Y aunque lleguen los días grises y tú sientas que no eres suficiente para salir de algo,
+me tienes a mí y tienes a tus otros amigos y tus familiares que te aprecian, porque lo que
+te digo de que el nombre Laura Navas da mucha inspiración, lo digo por ti, porque tú te haces
+querer y apreciar.
+</div>
+
+<div class="page">
+Sé que eres alguien muy valiente, muy capaz, honesta, eres alguien versátil, graciosa, ahora
+si te puedes considerar alguien sociable. Cariñosa a tu modo, detallista, amable, cautivadora,
+solidaria (aunque a veces te gane la pena), responsable, optimista, humilde, integra.
+</div>
+
+<div class="page">
+Y ps sé que tienes muchas más cualidades lo cuales te hacen especial, solo que aveces no está
+mal recordar lo que eres y tienes Jsjs.
+</div>
+
+<div class="page">
+Yo solo quiero que estos XV sean especiales porque solo una vez se cumplen quince años Jsjs,
+me alegro que si hayas querido celebrarlos y así haya sido algo más pequeño pero no importa,
+estás con las personas que también son importantes para ti. Te deseo un lindo día, que sea muy
+feliz y lleno de mucha plata jajajaja. Na mentiras, espero que si la pases bien.
+</div>
+
+<div class="page">
+Te quiero demasiado Laura, eres una de las personas más importantes para mí, cualquier cosa
+que pueda hacer por ti solo dímelo y te ayudaré.
+</div>
+
+<div class="nav">
+  <button onclick="prev()">Anterior</button>
+  <button onclick="next()">Siguiente</button>
+</div>
+
+</div>
+
+<script>
+let pages = document.querySelectorAll('.page');
+let current = 0;
+
+function showPage(index) {
+  pages.forEach(p => p.classList.remove('active'));
+  pages[index].classList.add('active');
+}
+
+function next() {
+  if (current < pages.length - 1) {
+    current++;
+    showPage(current);
+  }
+}
+
+function prev() {
+  if (current > 0) {
+    current--;
+    showPage(current);
+  }
+}
+</script>
+
+</body>
+</html>
